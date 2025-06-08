@@ -1,214 +1,206 @@
-<html>
-    <head>
-        <center><he>Por quê?</he></center>
-        <br>
-
-
-    </head>
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Por quê?</title>
     <style>
-            /* Galeria com carrossel automático */
-    .carousel {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      max-width: 90%;
-      height: 280px;
-      margin: 0 auto 60px;
-      position: relative;
-    }
-
-    .carousel img {
-      height: 100%;
-      width: auto;
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-      transition: opacity 0.5s ease-in-out;
-      position: absolute;
-      opacity: 0;
-      object-fit: contain;
-      cursor: pointer;/* Para indicar que a imagem é clicável */
-      pointer-events: none; 
-    }
-
-    .carousel img.active {
-      opacity: 1;
-      position: relative;
-      pointer-events: auto;
-    }
-
-    #fullscreen-container {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.95);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      cursor: pointer;
-    }
-
-    #fullscreen-container img {
-      max-width: 90%;
-      max-height: 90%;
-    }
-
-    .about-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-      text-align: left;
-    }
-
-    .about-section .text {
-      max-width: 600px;
-      color: #ccc;
-    }
-
-    .about-section img {
-      width: 300px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-    }
-        he{
-            color:black;
-            font-size: 40px;
-        }
-        body{
+        body {
             background-color: #919090;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
         }
-        ti{
+
+        h1 {
+            color: black;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            max-width: 90%;
+            height: 280px;
+            margin: 0 auto 60px;
+            position: relative;
+        }
+
+        .carousel img {
+            height: 100%;
+            width: auto;
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            opacity: 0;
+            object-fit: contain;
+            cursor: pointer;
+            pointer-events: none;
+        }
+
+        .carousel img.active {
+            opacity: 1;
+            position: relative;
+            pointer-events: auto;
+        }
+
+        #fullscreen-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.95);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        #fullscreen-container img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .poem {
             font-family: 'Times New Roman', Times, serif;
             font-size: 20px;
             color: black;
-            text-align: center;
             line-height: 1.5;
+            text-align: center;
         }
-        box{
-            display: inline-block;
-            margin: 10px;
+
+        .gift-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .gift-box {
             padding: 10px;
             border-radius: 10px;
             background-color: black;
-            
         }
-        a{
-            color : #919090;
+
+        .gift-box a {
+            color: #919090;
             text-decoration: none;
         }
-        hr{
-            color:salmon;
+
+        hr {
+            color: salmon;
         }
-        hp{
-            font-family: 'Times New Roman', Times, serif;
+
+        h2 {
             font-size: 30px;
+            text-align: center;
         }
     </style>
+</head>
+<body>
 
-    <body>
-        <section id="galeria">
-    <h2></h2>
-    <div class="carousel">
-      <img src="https://raw.githubusercontent.com/lipe3234/pessoal-don-t-open-please-/main/i1.jpg" class="active" alt="Foto 1" />
-      <img src="https://raw.githubusercontent.com/lipe3234/pessoal-don-t-open-please-/main/i2.jpg"  alt="Foto 2" />
-      <img src="https://raw.githubusercontent.com/lipe3234/pessoal-don-t-open-please-/main/i3.jpg"  alt="Foto 3" />
-      <img src="https://raw.githubusercontent.com/lipe3234/pessoal-don-t-open-please-/main/i4.jpg"  alt="Foto 4" />
-      <img src="https://raw.githubusercontent.com/lipe3234/pessoal-don-t-open-please-/main/i5.jpg"  alt="Foto 5" />
+    <h1>Por quê?</h1>
+
+    <section id="galeria">
+        <div class="carousel">
+            <img src="https://raw.githubusercontent.com/lipe3234/pessoal-don-t-open-please-/main/i1.jpg" class="active" alt="Foto 1" />
+            <img src="https://raw.githubusercontent.com/lipe3234/pessoal-don-t-open-please-/main/i2.jpg" alt="Foto 2" />
+            <img src="https://raw.githubusercontent.com/lipe3234/pessoal-don-t-open-please-/main/i3.jpg" alt="Foto 3" />
+            <img src="https://raw.githubusercontent.com/lipe3234/pessoal-don-t-open-please-/main/i4.jpg" alt="Foto 4" />
+            <img src="https://raw.githubusercontent.com/lipe3234/pessoal-don-t-open-please-/main/i5.jpg" alt="Foto 5" />
+        </div>
+    </section>
+
+    <!-- Container para fullscreen -->
+    <div id="fullscreen-container" onclick="closeFullscreen()">
+        <img id="fullscreen-img" src="" alt="Imagem em tela cheia">
     </div>
-  </section>
-        <br><br>
-        <center>
-            <ti>Por que me sinto tão vazio?<p>
-        Por que a tristeza ainda me consome?<p>
-        Por que sinto vontade de chorar?<p>
-        Por que não sinto nem mais fome?<p>
 
-        <br>
+    <div class="poem">
+        Por que me sinto tão vazio?<br>
+        Por que a tristeza ainda me consome?<br>
+        Por que sinto vontade de chorar?<br>
+        Por que não sinto nem mais fome?<br><br>
 
-        Talvez eu ainda te quero<p></p>
-        Talvez eu ainda pense em ti<p></p>
-        Talvez eu ainda quero ficar velho,contigo<p></p>
-        Talvez eu esteja só pensando em mim<p></p>
-        <br>
+        Talvez eu ainda te quero<br>
+        Talvez eu ainda pense em ti<br>
+        Talvez eu ainda quero ficar velho, contigo<br>
+        Talvez eu esteja só pensando em mim<br><br>
 
-        Pode ser que seja amor<p></p>
-        Bem que dizem que tudo pode machucar<p></p>
-        Só não pensei que seria assim tão doloroso<p></p>
-        te amar<p></p>
+        Pode ser que seja amor<br>
+        Bem que dizem que tudo pode machucar<br>
+        Só não pensei que seria assim tão doloroso<br>
+        te amar<br><br>
 
-        <br>
+        Não me arrependo de ter me humilhado<br>
+        Nem de ter me doado<br>
+        Só espero que esse humilhado<br>
+        Realmente seja exaltado<br><br>
 
-        Não me arrependo de ter me humilhado<p></p>
-        Nem de ter me doado<p></p>
-        Só espero que esse humilhado<p></p>
-        Realmente seja exaltado<p></p>
+        Não digo isso porque sou um santo<br>
+        Mas porque dizem que é assim que funciona<br>
+        E se realmente for assim...<br>
+        Espero que você finalmente veja o quanto que te amo<br><br>
+    </div>
 
-        <br>
+    <h2>Lembra dos meus presentes?? <br> Não né? Vou te relembrar:</h2>
 
-        Não digo isso porque sou um santo<p></p>
-        Mas porque dizem que é assim que funciona<p></p>
-        E se realmente for assim...<p></p>
-        Espero que você finalmente veja o quanto que te amo<p></p>
-        <br><br>
+    <div class="gift-links">
+        <div class="gift-box">
+            <a href="https://lipe3234.github.io/hearth/">O coração pulsando até meu amor por você acabar...</a>
+        </div>
+        <div class="gift-box">
+            <a href="https://lipe3234.github.io/flor/">A primeira flor que te dei...</a>
+        </div>
+        <div class="gift-box">
+            <a href="https://lipe3234.github.io/Flower/">Os girassóis que você tanto ama...</a>
+        </div>
+    </div>
 
-        </ti>
-        <hp>
-            Lembra dos meus presentes?? <p>
-                Não ne, vou te relembrar
-            </p>
-        </hp>
-        <box>
-            <a href ="https://lipe3234.github.io/hearth/"> O coração pulsando até meu amor por você acabar...</a>
-        </box>
-        <box>
-            <a href ="https://lipe3234.github.io/flor/">A primeira flor que te dei...</a>
-        </box>
-        <box>
-            <a href ="https://lipe3234.github.io/Flower/">Os girasóis que você tanto ama...</a>
-        </box>
-        
-        <hr>
-        <ti> Queria ter te dado mais, só que percebi tarde demais o quanto que te amo....</ti>
-        
-    </body>
+    <hr>
+    <div class="text-center poem">
+        Queria ter te dado mais, só que percebi tarde demais o quanto que te amo....
+    </div>
+
     <script>
-        unction showFullscreen(src) {
-      const fullscreenContainer = document.getElementById('fullscreen-container');
-      const fullscreenImg = document.getElementById('fullscreen-img');
-      fullscreenImg.src = src;
-      fullscreenContainer.style.display = 'flex';
-    }
+        function showFullscreen(src) {
+            const fullscreenContainer = document.getElementById('fullscreen-container');
+            const fullscreenImg = document.getElementById('fullscreen-img');
+            fullscreenImg.src = src;
+            fullscreenContainer.style.display = 'flex';
+        }
 
-    function closeFullscreen() {
-      const fullscreenContainer = document.getElementById('fullscreen-container');
-      fullscreenContainer.style.display = 'none';
-    }
+        function closeFullscreen() {
+            const fullscreenContainer = document.getElementById('fullscreen-container');
+            fullscreenContainer.style.display = 'none';
+        }
 
-    // Ativar fullscreen ao clicar nas imagens do carrossel
-    const carouselImages = document.querySelectorAll('.carousel img');
-    carouselImages.forEach(img => {
-      img.addEventListener('click', () => {
-        showFullscreen(img.src);
-      });
-    });
+        // Ativar fullscreen ao clicar nas imagens do carrossel
+        const carouselImages = document.querySelectorAll('.carousel img');
+        carouselImages.forEach(img => {
+            img.addEventListener('click', () => {
+                showFullscreen(img.src);
+            });
+        });
 
-    // Carrossel automático
-    let current = 0;
-    setInterval(() => {
-      carouselImages[current].classList.remove('active');
-      current = (current + 1) % carouselImages.length;
-      carouselImages[current].classList.add('active');
-    }, 4000);
+        // Carrossel automático
+        let current = 0;
+        setInterval(() => {
+            carouselImages[current].classList.remove('active');
+            current = (current + 1) % carouselImages.length;
+            carouselImages[current].classList.add('active');
+        }, 4000);
     </script>
+
+</body>
 </html>
