@@ -7,6 +7,77 @@
     </head>
 
     <style>
+            /* Galeria com carrossel automático */
+    .carousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      max-width: 90%;
+      height: 280px;
+      margin: 0 auto 60px;
+      position: relative;
+    }
+
+    .carousel img {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+      transition: opacity 0.5s ease-in-out;
+      position: absolute;
+      opacity: 0;
+      object-fit: contain;
+      cursor: pointer;/* Para indicar que a imagem é clicável */
+      pointer-events: none; 
+    }
+
+    .carousel img.active {
+      opacity: 1;
+      position: relative;
+      pointer-events: auto;
+    }
+
+    #fullscreen-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      cursor: pointer;
+    }
+
+    #fullscreen-container img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      text-align: left;
+    }
+
+    .about-section .text {
+      max-width: 600px;
+      color: #ccc;
+    }
+
+    .about-section img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    }
         he{
             color:black;
             font-size: 40px;
@@ -46,6 +117,16 @@
     </style>
 
     <body>
+        <section id="galeria">
+    <h2>Gui - Fotógrafo</h2>
+    <div class="carousel">
+      <img src="https://raw.githubusercontent.com/lipe3234/gui-fotos/main/img1.jpg" class="active" alt="Foto 1" />
+      <img src="https://raw.githubusercontent.com/lipe3234/gui-fotos/main/img2.jpg"  alt="Foto 2" />
+      <img src="https://raw.githubusercontent.com/lipe3234/gui-fotos/main/20240312165330_IMG_1169.jpg"  alt="Foto 3" />
+      <img src="https://raw.githubusercontent.com/lipe3234/gui-fotos/main/IMG_1818.JPG"  alt="Foto 4" />
+      <img src="https://raw.githubusercontent.com/lipe3234/gui-fotos/main/IMG_5820.jpg"  alt="Foto 5" />
+    </div>
+  </section>
         <br><br>
         <center>
             <ti>Por que me sinto tão vazio?<p>
@@ -101,4 +182,33 @@
         <ti> Queria ter te dado mais, só que percebi tarde demais o quanto que te amo....</ti>
         
     </body>
+    <script>
+        unction showFullscreen(src) {
+      const fullscreenContainer = document.getElementById('fullscreen-container');
+      const fullscreenImg = document.getElementById('fullscreen-img');
+      fullscreenImg.src = src;
+      fullscreenContainer.style.display = 'flex';
+    }
+
+    function closeFullscreen() {
+      const fullscreenContainer = document.getElementById('fullscreen-container');
+      fullscreenContainer.style.display = 'none';
+    }
+
+    // Ativar fullscreen ao clicar nas imagens do carrossel
+    const carouselImages = document.querySelectorAll('.carousel img');
+    carouselImages.forEach(img => {
+      img.addEventListener('click', () => {
+        showFullscreen(img.src);
+      });
+    });
+
+    // Carrossel automático
+    let current = 0;
+    setInterval(() => {
+      carouselImages[current].classList.remove('active');
+      current = (current + 1) % carouselImages.length;
+      carouselImages[current].classList.add('active');
+    }, 4000);
+    </script>
 </html>
